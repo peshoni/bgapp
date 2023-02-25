@@ -2,7 +2,7 @@ version: '3.8'
 services:
   front:
     build:
-      context: web
+      context: ./web
       dockerfile: Dockerfile.web
     ports:
       - 8080:80
@@ -16,7 +16,7 @@ services:
 
   db:
     build:
-      context: db
+      context: ./db
       dockerfile: Dockerfile.db
     networks:
       - bg-cities-net
